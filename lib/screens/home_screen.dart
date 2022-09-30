@@ -54,8 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Container(
           color: Colors.black,
           child: Padding(
-            padding: const EdgeInsets.only(top: 16.0),
+            padding: const EdgeInsets.only(top: 20.0),
             child: Column(
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CarouselSlider(
@@ -63,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       .map((item) => Container(
                             width: width,
                             decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
                                 image: AssetImage('$item'),
                                 fit: BoxFit.cover,
@@ -108,8 +110,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                             child: Container(
-                              height: 120,
-                              width: 120,
+                              height: 125,
+                              width: 125,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -141,8 +143,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 120,
-                              width: 120,
+                              height: 125,
+                              width: 125,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -176,8 +178,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 120,
-                              width: 120,
+                              height: 125,
+                              width: 125,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -187,8 +189,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ImageIcon(
-                                    AssetImage("assets/icons/smart_hub.png"),
-                                    size: 60,
+                                    AssetImage("assets/icons/pro_series.png"),
+                                    size: 65,
                                     color: Colors.blueAccent,
                                   ),
                                   SizedBox(
@@ -217,8 +219,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 120,
-                              width: 120,
+                              height: 125,
+                              width: 125,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -228,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ImageIcon(
-                                    AssetImage("assets/icons/smart_hub.png"),
+                                    AssetImage("assets/icons/off_road.png"),
                                     size: 60,
                                     color: Colors.blueAccent,
                                   ),
@@ -251,8 +253,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 120,
-                              width: 120,
+                              height: 125,
+                              width: 125,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -262,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ImageIcon(
-                                    AssetImage("assets/icons/smart_hub.png"),
+                                    AssetImage("assets/icons/exterior.png"),
                                     size: 60,
                                     color: Colors.blueAccent,
                                   ),
@@ -285,8 +287,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 120,
-                              width: 120,
+                              height: 125,
+                              width: 125,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -296,7 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   ImageIcon(
-                                    AssetImage("assets/icons/smart_hub.png"),
+                                    AssetImage("assets/icons/led_switch.png"),
                                     size: 60,
                                     color: Colors.blueAccent,
                                   ),
@@ -320,7 +322,48 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                )
+                ),
+                /*  SizedBox(
+                  height: height * 0.01,
+                ), */
+                Expanded(child: Center()),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        bottom: 16.0, left: 110, right: 110),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: () {},
+                          child: ImageIcon(
+                            AssetImage("assets/icons/facebook.png"),
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: ImageIcon(
+                            AssetImage("assets/icons/instagram.png"),
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () {},
+                          child: ImageIcon(
+                            AssetImage("assets/icons/share.png"),
+                            size: 40,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

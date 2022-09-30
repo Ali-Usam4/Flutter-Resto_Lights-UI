@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:type_s_led/screens/home_screen.dart';
 import 'package:type_s_led/screens/login.dart';

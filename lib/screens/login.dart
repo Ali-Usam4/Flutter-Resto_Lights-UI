@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:type_s_led/screens/home_screen.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class _LoginState extends State<Login> {
           height: height,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/login_back1.jpg"),
+                image: AssetImage("assets/images/login_back3.jpg"),
                 fit: BoxFit.cover),
           ),
           child: Padding(
@@ -56,11 +56,6 @@ class _LoginState extends State<Login> {
                         fontSize: 36,
                         fontWeight: FontWeight.bold,
                       ),
-                      /* style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                      ), */
                     ),
                   ),
                 ),
@@ -82,118 +77,135 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: 30,
                 ),
-                Container(
-                  height: 45,
-                  width: width * 0.65,
-                  //color: Colors.white,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      ImageIcon(
-                        AssetImage("assets/icons/apple.png"),
-                        //size: 60,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "Sign in with Apple",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 16),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  height: 45,
-                  width: width * 0.65,
-                  //color: Colors.white,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Container(
-                        height: 22,
-                        width: 22,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/icons/google.png"))),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "Sign in with Google",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700, fontSize: 16),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  height: 45,
-                  width: width * 0.65,
-                  //color: Colors.white,
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      ImageIcon(
-                        AssetImage("assets/icons/facebook.png"),
-                        //size: 60,
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: 45,
+                    width: width * 0.65,
+                    //color: Colors.white,
+                    decoration: BoxDecoration(
                         color: Colors.white,
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Text(
-                        "Login with Facebook",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16,
-                            color: Colors.white),
-                      ),
-                    ],
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        ImageIcon(
+                          AssetImage("assets/icons/apple.png"),
+                          //size: 60,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          "Sign in with Apple",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 16),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: 45,
+                    width: width * 0.65,
+                    //color: Colors.white,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        Container(
+                          height: 22,
+                          width: 22,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image:
+                                      AssetImage("assets/icons/google.png"))),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          "Sign in with Google",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, fontSize: 16),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: 45,
+                    width: width * 0.65,
+                    //color: Colors.white,
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        ImageIcon(
+                          AssetImage("assets/icons/facebook.png"),
+                          //size: 60,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          "Login with Facebook",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
-                  child: Center(
-                      //child: Text("Centered text"),
-                      ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      "Continue As Guest  > ",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ),
+                        );
+                      },
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: Text(
+                          "Continue As Guest  > ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
