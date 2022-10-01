@@ -1,11 +1,9 @@
 // ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:type_s_led/screens/select_vehicle.dart';
-import 'package:type_s_led/screens/type_a.dart';
+import 'package:resto_lights/screens/type_a.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -86,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     aspectRatio: 16 / 9,
                     autoPlayCurve: Curves.fastOutSlowIn,
                     enableInfiniteScroll: true,
-                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    autoPlayAnimationDuration: Duration(milliseconds: 1200),
                     viewportFraction: 0.8,
                   ),
                 ),
@@ -110,8 +108,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                             child: Container(
-                              height: 125,
-                              width: 125,
+                              height: 120,
+                              width: 120,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -122,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   ImageIcon(
                                     AssetImage("assets/icons/smart_hub.png"),
-                                    size: 60,
+                                    size: 65,
                                     color: Colors.blueAccent,
                                   ),
                                   SizedBox(
@@ -131,11 +129,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     "SMART HUB",
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       //fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
@@ -143,8 +141,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 125,
-                              width: 125,
+                              height: 120,
+                              width: 120,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -166,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     "SMART DOME \n MOTERCYCLE",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 12,
                                       //fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -178,8 +176,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 125,
-                              width: 125,
+                              height: 120,
+                              width: 120,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -190,16 +188,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   ImageIcon(
                                     AssetImage("assets/icons/pro_series.png"),
-                                    size: 65,
+                                    size: 70,
                                     color: Colors.blueAccent,
                                   ),
                                   SizedBox(
-                                    height: height * 0.01,
+                                    height: height * 0.008,
                                   ),
                                   Text(
                                     "PRO SERIES",
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       //fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -211,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: height * 0.015,
+                        height: height * 0.018,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -219,8 +217,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 125,
-                              width: 125,
+                              height: 120,
+                              width: 120,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -241,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     "SMART \n OFF-ROAD",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       //fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -253,8 +251,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 125,
-                              width: 125,
+                              height: 120,
+                              width: 120,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -275,7 +273,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     "SMART EXTERIOR",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       //fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -287,8 +285,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           InkWell(
                             onTap: () {},
                             child: Container(
-                              height: 125,
-                              width: 125,
+                              height: 120,
+                              width: 120,
                               padding: EdgeInsets.only(left: 12, right: 12),
                               decoration: BoxDecoration(
                                 border: Border.all(
@@ -299,7 +297,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   ImageIcon(
                                     AssetImage("assets/icons/led_switch.png"),
-                                    size: 60,
+                                    size: 65,
                                     color: Colors.blueAccent,
                                   ),
                                   SizedBox(
@@ -309,7 +307,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     "SMART LED \n SWITCH",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       //fontWeight: FontWeight.w500,
                                       color: Colors.white,
                                     ),
@@ -331,7 +329,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   alignment: Alignment.bottomCenter,
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        bottom: 16.0, left: 110, right: 110),
+                        bottom: 16.0, left: 130, right: 130),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -340,7 +338,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () {},
                           child: ImageIcon(
                             AssetImage("assets/icons/facebook.png"),
-                            size: 40,
+                            size: 30,
                             color: Colors.white,
                           ),
                         ),
@@ -348,7 +346,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () {},
                           child: ImageIcon(
                             AssetImage("assets/icons/instagram.png"),
-                            size: 40,
+                            size: 30,
                             color: Colors.white,
                           ),
                         ),
@@ -356,7 +354,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: () {},
                           child: ImageIcon(
                             AssetImage("assets/icons/share.png"),
-                            size: 40,
+                            size: 30,
                             color: Colors.white,
                           ),
                         ),

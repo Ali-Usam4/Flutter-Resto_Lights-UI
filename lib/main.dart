@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:type_s_led/screens/home_screen.dart';
-import 'package:type_s_led/screens/login.dart';
+import 'package:resto_lights/screens/login.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,4 +1,4 @@
-name: type_s_led
+name: resto_lights
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -48,6 +48,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   carousel_slider: ^4.0.0
   group_button: ^5.2.2
+  flutter_circle_color_picker: ^0.3.0
 
 
 # For information on the generic Dart part of this file, see the
@@ -102,6 +103,11 @@ flutter:
     - assets/icons/off_road.png
     - assets/icons/exterior.png
     - assets/icons/pro_series.png
+
+    - assets/icons/speed_high.png
+    - assets/icons/speed_low.png
+    - assets/icons/brightness_high.png
+    - assets/icons/brightness_low.png
 
     - assets/icons/apple.png
     - assets/icons/google.png
