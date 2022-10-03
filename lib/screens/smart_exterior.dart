@@ -1,23 +1,38 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, avoid_print
-
-//import 'dart:html';
-
-//import 'dart:html';
+// ignore_for_file: prefer_const_constructors, avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:resto_lights/screens/select_vehicle.dart';
-import 'package:resto_lights/widget/select_color.dart';
 
-class TypeA extends StatefulWidget {
-  const TypeA({Key? key}) : super(key: key);
+import '../widget/select_color.dart';
+import '../widget/select_vehicle_top.dart';
+
+class SmartExterior extends StatefulWidget {
+  const SmartExterior({Key? key}) : super(key: key);
 
   @override
-  State<TypeA> createState() => _TypeAState();
+  State<SmartExterior> createState() => _SmartExteriorState();
 }
 
-class _TypeAState extends State<TypeA> {
-  List<bool> isSelected = [true, false, false, false, false, false];
-  List<String> data = ['GLOW', "BLINK", "STROBE", "FADE", "PRISM", "CYCLE"];
+class _SmartExteriorState extends State<SmartExterior> {
+  List<bool> isSelected = [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ];
+  List<String> data = [
+    'GLOW',
+    "BLINK",
+    "STROBE",
+    "FADE",
+    "MUSIC",
+    "PRISM",
+    "CYCLE",
+    "SCAN"
+  ];
 
   int? brightness = 5;
   int? speed = 5;
@@ -26,6 +41,7 @@ class _TypeAState extends State<TypeA> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(60.0),
@@ -70,7 +86,7 @@ class _TypeAState extends State<TypeA> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SelectVehicle(),
+                              builder: (context) => SelectVehicleTop(),
                             ));
                       },
                       child: ImageIcon(
@@ -87,12 +103,12 @@ class _TypeAState extends State<TypeA> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.push(
+                      /* Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => TypeA(),
+                          builder: (context) => SmartDome(),
                         ),
-                      );
+                      ); */
                     },
                     child: Container(
                       height: 90,
@@ -127,12 +143,12 @@ class _TypeAState extends State<TypeA> {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.push(
+                      /* Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => TypeA(),
                         ),
-                      );
+                      ); */
                     },
                     child: Container(
                       height: 90,
@@ -212,42 +228,81 @@ class _TypeAState extends State<TypeA> {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.push(
+                      /* Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) => TypeA(),
                         ),
-                      );
+                      ); */
                     },
-                    child: Container(
-                      height: 90,
-                      width: 90,
-                      padding: EdgeInsets.only(left: 12, right: 12),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.blueAccent, width: 1),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ImageIcon(
-                            AssetImage("assets/icons/share.png"),
-                            size: 32,
-                            color: Colors.blueAccent,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 90,
+                          padding: EdgeInsets.only(left: 12, right: 12),
+                          decoration: BoxDecoration(
+                            border:
+                                Border.all(color: Colors.blueAccent, width: 1),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              ImageIcon(
+                                AssetImage("assets/icons/share.png"),
+                                size: 20,
+                                color: Colors.blueAccent,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "SHARE",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            "SHARE",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          height: 6,
+                        ),
+                        Container(
+                          height: 40,
+                          width: 90,
+                          padding: EdgeInsets.only(left: 6, right: 6),
+                          decoration: BoxDecoration(
+                            border:
+                                Border.all(color: Colors.blueAccent, width: 1),
+                          ),
+                          child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              ImageIcon(
+                                AssetImage("assets/icons/lock.png"),
+                                size: 20,
+                                color: Colors.blueAccent,
+                              ),
+                              SizedBox(
+                                width: 3,
+                              ),
+                              Text(
+                                "PASSWORD",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -279,9 +334,9 @@ class _TypeAState extends State<TypeA> {
                   behavior: const MaterialScrollBehavior()
                       .copyWith(overscroll: false),
                   child: GridView.count(
-                    crossAxisCount: 3,
+                    crossAxisCount: 4,
                     crossAxisSpacing: 8,
-                    childAspectRatio: 3,
+                    childAspectRatio: 2,
                     mainAxisSpacing: 8,
                     children: List.generate(isSelected.length, (index) {
                       //using Inkwell widget to create a button

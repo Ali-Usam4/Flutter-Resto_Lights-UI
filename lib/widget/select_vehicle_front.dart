@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class SelectVehicle extends StatefulWidget {
-  const SelectVehicle({Key? key}) : super(key: key);
+class SelectVehicleFront extends StatefulWidget {
+  const SelectVehicleFront({Key? key}) : super(key: key);
 
   @override
-  State<SelectVehicle> createState() => _SelectVehicleState();
+  State<SelectVehicleFront> createState() => _SelectVehicleFrontState();
 }
 
-class _SelectVehicleState extends State<SelectVehicle> {
+class _SelectVehicleFrontState extends State<SelectVehicleFront> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -57,24 +57,45 @@ class _SelectVehicleState extends State<SelectVehicle> {
               children: [
                 InkWell(
                   onTap: () {},
-                  child: Column(
-                    children: [
-                      Container(
-                        height: height * 0.22,
-                        width: width * 0.8,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/car.png"),
-                                fit: BoxFit.cover)),
+                  child: Container(
+                    height: height * 0.28,
+                    width: width * 0.8,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/car_front.png"),
+                            fit: BoxFit.cover)),
+                  ),
+                ),
+                Divider(
+                  color: Colors.blue,
+                  thickness: 1.0,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: height * 0.28,
+                    width: width * 0.8,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/sedan_front.png"),
+                        fit: BoxFit.contain,
                       ),
-                      Text(
-                        "Car",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
+                    ),
+                  ),
+                ),
+                Divider(
+                  color: Colors.blue,
+                  thickness: 1.0,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: height * 0.28,
+                    width: width * 0.8,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/images/jeep_front.png"),
+                            fit: BoxFit.contain)),
                   ),
                 ),
                 Divider(
@@ -83,50 +104,15 @@ class _SelectVehicleState extends State<SelectVehicle> {
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Column(
-                    children: [
-                      Container(
-                        height: height * 0.22,
-                        width: width * 0.8,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/truck.png"),
-                                fit: BoxFit.cover)),
-                      ),
-                      Text(
-                        "Truck",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Divider(
-                  color: Colors.blue,
-                  thickness: 0.8,
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Column(
-                    children: [
-                      Container(
-                        height: height * 0.22,
-                        width: width * 0.8,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                          image: AssetImage("assets/images/suv.png"),
-                        )),
-                      ),
-                      Text(
-                        "SUV",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
+                  child: Container(
+                    height: height * 0.28,
+                    width: width * 0.8,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              "assets/images/suv_front.png",
+                            ),
+                            fit: BoxFit.contain)),
                   ),
                 ),
                 Divider(

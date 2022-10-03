@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:resto_lights/screens/login.dart';
+import 'package:resto_lights/screens/profile.dart';
 
 void main() {
   runApp(const MyApp());

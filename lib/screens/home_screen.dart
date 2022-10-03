@@ -3,7 +3,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:resto_lights/screens/type_a.dart';
+import 'package:resto_lights/screens/off_road.dart';
+import 'package:resto_lights/screens/pro_series.dart';
+import 'package:resto_lights/screens/profile.dart';
+import 'package:resto_lights/screens/smart_dome.dart';
+import 'package:resto_lights/screens/smart_exterior.dart';
+import 'package:resto_lights/screens/smart_hub.dart';
+import 'package:resto_lights/screens/smart_led_switch.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -43,7 +49,14 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: [
             IconButton(
               icon: Icon(Icons.settings),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Profile(),
+                  ),
+                );
+              },
             )
           ],
         ),
@@ -103,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => TypeA(),
+                                  builder: (context) => SmartHub(),
                                 ),
                               );
                             },
@@ -139,7 +152,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SmartDome(),
+                                ),
+                              );
+                            },
                             child: Container(
                               height: 120,
                               width: 120,
@@ -174,7 +194,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ProSeries(),
+                                ),
+                              );
+                            },
                             child: Container(
                               height: 120,
                               width: 120,
@@ -215,7 +242,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => OffRoad(),
+                                ),
+                              );
+                            },
                             child: Container(
                               height: 120,
                               width: 120,
@@ -249,7 +283,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SmartExterior(),
+                                ),
+                              );
+                            },
                             child: Container(
                               height: 120,
                               width: 120,
@@ -283,7 +324,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SmartLedSwitch(),
+                                ),
+                              );
+                            },
                             child: Container(
                               height: 120,
                               width: 120,
