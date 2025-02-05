@@ -1,11 +1,12 @@
-Here’s a simple README template for your `Flutter-Resto_lights` UI-only project:
-
-```markdown
 # Flutter-Resto_lights
 
-This repository contains the UI for a restaurant-themed Flutter app. It focuses on showcasing the user interface elements, layouts, and design patterns, without any backend or data integration.
+This project contains the **Flutter UI** for a resto-themed app. It was my first project so it may have lazy code. 
 
 ## Features
+- Responsive Flutter UI
+- Modern design with Material Design principles
+- Custom widgets
 
-- Elegant and responsive UI designed for restaurant-related apps.
-- Modern design with clean and easy-to-navigate screens.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/Flutter-Resto_lights.git
