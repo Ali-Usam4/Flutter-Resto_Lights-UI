@@ -9,4 +9,3 @@ This repository contains the UI for a restaurant-themed Flutter app. It focuses 
 
 - Elegant and responsive UI designed for restaurant-related apps.
 - Modern design with clean and easy-to-navigate screens.
-- Custom widgets and animations for a rich user experience.
